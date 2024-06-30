@@ -6,6 +6,6 @@
 
  <p></p>
 
- 2.<a href="https://matheuslcnh.github.io/Myrepos/Javascript/Notas.html" target="_blank">Execute o Site Notas criado em HTML E CSS3, JAVASCRIPT</a>
+ 2.<a href="https://matheuslcnh.github.io/Myrepos/Javasript/Notas.html" target="_blank">Execute o Site Notas criado em HTML E CSS3, JAVASCRIPT</a>
  
 
