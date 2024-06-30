@@ -14,8 +14,8 @@
             font-family: 'Times New Roman', Times, serif;
         }
         .bot{
-            border-radius: 5px 5px 5px 5px rgba(17, 167, 155, 0.959); 
-            box-shadow: 1px 1px 1px 1px black ; 
+            border-radius: 5px;
+            box-shadow: 1px 1px 1px 1px black; 
             margin: auto; 
             font-family: 'Times New Roman', Times, serif;
         }
@@ -38,7 +38,7 @@
             color: #fff;
             font-size: 24px;
             font-family: Arial, Helvetica, sans-serif;
-            border-radius: 10x 10px 0px 0px;
+            border-radius: 10px 10px 0px 0px;
             background-image: url(fundo.avif);
             background-size: cover;
             height: 180px;
@@ -50,69 +50,61 @@
             margin: auto;
             background-color: #fff;
             box-shadow: #000 2px 2px 2px 2px;
-            border-radius: 10px 10px 10px 10px;
+            border-radius: 10px;
         }
-           
-        
-                
     </style>
-    
 </head>
 <body>
     <div class="container" style="height: 80%;">
-        <p>
-            <script>
-                    function validaCampo(){
-                        var nota1=document.getElementById("nota1");
-                        if(nota1.value == ""){
-                            alert("campo nota 1 não pode ser vazio");
-                            nota1.focus();
-                            return false;
-                        }
-                        var nota2 = document.getElementById("nota2");
-                        if(nota2.value == ""){
-                            alert("campo nota 2 não pode ser vazio");
-                            nota2.focus();
-                            return false;
-                        }
-                        var nota3 = document.getElementById("nota3");
-                        if(nota3.value == ""){
-                            alert("campo nota 3 não pode ser vazio");
-                            nota3.focus();
-                            return false;
-                        }
-                        var nota4 = document.getElementById("nota4");
-                        if(nota4.value == ""){
-                            alert("campo nota 4 não pode ser vazio");
-                            nota4.focus();
-                            return false;
-                        }
-                        var media = (parseFloat(nota1.value) + parseFloat(nota2.value) + parseFloat(nota3.value) + parseFloat(nota4.value))/4; 
-                        alert("A média das notas é: " +media);
-                    }
-                    
-            </script>
-            
-            
-            <form action="" method="POST" onsubmit="return validaCampo()" class="form-control" style="background-color: rgba(74, 237, 243, 0.616);">
-                <h3 style="font-family: 'Times New Roman', Times, serif;">Função de Médias</h3>
-                <p></p>
-                <label for="nota1" div class="label">Nota 1</label>
-                <input type="number" placeholder="Digite a nota: " class="form-control" name="nota1" id="nota1">
-                <label for="nota2" div class="label">Nota 2</label>
-                <input type="number" placeholder="Digite a nota: " class="form-control" name="nota2" id="nota2">
-                <label for="nota3" div class="label">Nota 3</label>
-                <input type="number" placeholder="Digite a nota: " class="form-control" name="nota3" id="nota3">
-                <label for="nota4" div class="label">Nota 4</label>
-                <input type="number" placeholder="Digite a nota: " class="form-control" name="nota4" id="nota4">
+        <script>
+            function validaCampo(event){
+                event.preventDefault();
                 
-                <p></p>
-                <button type="submit" class="btn btn-outline-primary" value="enviar" style="border-radius: 5px 5px 5px 5px rgba(17, 167, 155, 0.959); box-shadow: 1px 1px 1px 1px black ; margin: auto; font-family: 'Times New Roman', Times, serif;">Calcular</button>
-                
-            </form>
-            <div class="rodape">Matheus Lourenço Cunha</div>
+                var nota1 = document.getElementById("nota1");
+                if(nota1.value == ""){
+                    alert("Campo nota 1 não pode ser vazio");
+                    nota1.focus();
+                    return false;
+                }
+                var nota2 = document.getElementById("nota2");
+                if(nota2.value == ""){
+                    alert("Campo nota 2 não pode ser vazio");
+                    nota2.focus();
+                    return false;
+                }
+                var nota3 = document.getElementById("nota3");
+                if(nota3.value == ""){
+                    alert("Campo nota 3 não pode ser vazio");
+                    nota3.focus();
+                    return false;
+                }
+                var nota4 = document.getElementById("nota4");
+                if(nota4.value == ""){
+                    alert("Campo nota 4 não pode ser vazio");
+                    nota4.focus();
+                    return false;
+                }
+                var media = (parseFloat(nota1.value) + parseFloat(nota2.value) + parseFloat(nota3.value) + parseFloat(nota4.value))/4; 
+                alert("A média das notas é: " + media);
+            }
+        </script>
+
+        <form onsubmit="validaCampo(event)" class="form-control" style="background-color: rgba(74, 237, 243, 0.616);">
+            <h3 style="font-family: 'Times New Roman', Times, serif;">Função de Médias</h3>
+            <p></p>
+            <label for="nota1" class="label">Nota 1</label>
+            <input type="number" placeholder="Digite a nota: " class="form-control" name="nota1" id="nota1">
+            <label for="nota2" class="label">Nota 2</label>
+            <input type="number" placeholder="Digite a nota: " class="form-control" name="nota2" id="nota2">
+            <label for="nota3" class="label">Nota 3</label>
+            <input type="number" placeholder="Digite a nota: " class="form-control" name="nota3" id="nota3">
+            <label for="nota4" class="label">Nota 4</label>
+            <input type="number" placeholder="Digite a nota: " class="form-control" name="nota4" id="nota4">
             
-        </p>
+            <p></p>
+            <button type="submit" class="btn btn-outline-primary bot" value="enviar">Calcular</button>
+        </form>
+        <div class="rodape">Matheus Lourenço Cunha</div>
     </div>
 </body>
 </html>
