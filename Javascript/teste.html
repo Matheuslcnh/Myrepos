@@ -13,32 +13,32 @@
             <script>
                     function validaCampo(){
                         var nota1=document.getElementById("nota1");
-                        if(nota1.value == "");{
+                        if(nota1.value == ""){
                             alert("campo nota 1 não pode ser vazio"+nota1.value)
                             nota1.focus();
                             return false;
                         }
                         var nota2 = document.getElementById("nota2");
-                        if(nota2.value == "");{
+                        if(nota2.value == ""){
                             alert("campo nota 2 não pode ser vazio");
                             nota2.focus();
                             return false;
                         }
                         var nota3 = document.getElementById("nota3");
-                        if(nota3.value == "");{
+                        if(nota3.value == ""){
                             alert("campo nota 3 não pode ser vazio");
                             nota3.focus();
                             return false;
                         }
                         var nota4 = document.getElementById("nota4");
-                        if(nota4.value == "");{
+                        if(nota4.value == ""){
                             alert("campo nota 4 não pode ser vazio");
                             nota4.focus();
                             return false;
                         }
                         
                         
-                        var media = (parseFloat(nota1) + parseFloat(nota2) + parseFloat(nota3) + parseFloat(nota4))/4; 
+                        var media = (parseFloat(nota1.value) + parseFloat(nota2.value) + parseFloat(nota3.value) + parseFloat(nota4.value))/4; 
                         alert("A média das notas é:" +media);
                         
                     }
