@@ -6,7 +6,7 @@
 
  <p></p>
 <h2>Java Script</h2>
- 2.<a href="https://matheuslcnh.github.io/Myrepos/Javascript/Notas.html" target="_blank">Execute o Site Notas</a>
+ 1.<a href="https://matheuslcnh.github.io/Myrepos/Javascript/Notas.html" target="_blank">Execute o Site Notas</a>
 
  <h3>Redes Sociais</h3>
  <a href="https://www.instagram.com/_23matusy/" target="_blank">Instagram</a>
