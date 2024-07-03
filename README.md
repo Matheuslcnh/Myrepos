@@ -13,6 +13,9 @@
  <p></p>
 <h2>Java Script</h2>
  1.<a href="https://matheuslcnh.github.io/Myrepos/Javascript/Notas.html" target="_blank">Run Site Notes</a>
+ <p></p>
+ <h2>Python</h2>
+ <a href="https://github.com/Matheuslcnh/Curso-Python" target="_blank">Explore the Python repository</a>
 
  <h3>Social media</h3>
  <div>
