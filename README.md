@@ -17,7 +17,7 @@
 </div>
 
 <p></p>
-<h2>HTML e CSS3</h2>
+<h2 style="color: blue">HTML e CSS3</h2>
  1.<a href="https://matheuslcnh.github.io/Myrepos/Sites/Android/android.html" target="_blank">Run the Android Website</a>
  <p></p>
  2.<a href="https://matheuslcnh.github.io/Myrepos/Sites/Cordel/cordel.html" target="_blank">Run the Cordel Site</a>
@@ -25,10 +25,10 @@
  3.<a href="https://matheuslcnh.github.io/Myrepos/Sites/Projeto%20Social/Social.html" target="_blank">Run the social project Website
 
  <p></p>
-<h2>Java Script</h2>
+<h2 style="color: blue">Java Script</h2>
  1.<a href="https://matheuslcnh.github.io/Myrepos/Javascript/Notas.html" target="_blank">Run Site Notes</a>
  <p></p>
- <h2>Python</h2>
+ <h2 style="color: blue">Python</h2>
  <a href="https://github.com/Matheuslcnh/Curso-Python" target="_blank">Explore the Python repository</a>
 
  <h3>Social media</h3>
