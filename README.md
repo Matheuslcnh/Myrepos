@@ -31,6 +31,8 @@
 <h2 style="color: blue">Java Script</h2>
  1.<a href="https://matheuslcnh.github.io/Myrepos/Javascript/Notas.html" target="_blank">Run Site Notes</a>
  <p></p>
+ 2.<a href="https://matheuslcnh.github.io/Myrepos/Sites/ProjetoJS/modelo.html" target="_blank">Run Site Hours</a>
+ <p></p>
  <h2 style="color: blue">Python</h2>
  <a href="https://github.com/Matheuslcnh/Curso-Python" target="_blank">Explore the Python repository</a>
 
