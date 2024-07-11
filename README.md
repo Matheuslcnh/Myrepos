@@ -36,9 +36,9 @@
  <p></p>
  3.<a href="https://matheuslcnh.github.io/Myrepos/Sites/Projetoidade/idade.html" target="_blank">Run Site Years</a>
  <p></p>
- 4.<a href="https://matheuslcnh.github.io/Myrepos/Sites/ProjetoTabuada/modelo.html" target="_blank">Run the Tabuada website</a>
+ 4.<a href="https://matheuslcnh.github.io/Myrepos/Sites/ProjetoTabuada/modelo.html" target="_blank">Run the Tabuada Website</a>
  <p></p>
- 5.<a href="https://matheuslcnh.github.io/Myrepos/Sites/ProjetoContar/modelo.html" target="_blank">Run the Contar website</a>
+ 5.<a href="https://matheuslcnh.github.io/Myrepos/Sites/ProjetoContar/modelo.html" target="_blank">Run the Contar Website</a>
  <p></p>
  <h2 style="color: blue">Python</h2>
  <a href="https://github.com/Matheuslcnh/Curso-Python" target="_blank">Explore the Python repository</a>
