@@ -1,0 +1,58 @@
+body{
+    background: rgba(70, 142, 236, 0.836);
+    font: normal 15pt Arial;
+    height: 100%;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    
+}
+
+header{
+    color: white;
+    text-align: center;
+    
+}
+
+section{
+    background: white;
+    border-radius: 12px;
+    padding: 15px;
+    margin: auto;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.363);
+    display: flex;
+    justify-content: center;
+    width: 90vw;
+    min-width: 300px;
+    max-width: 600px;
+    
+}
+
+select#flista{
+    width: 180px;
+    margin: 0px;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #f9f9f9;
+    font-size: 17px;
+    color: #333;
+    
+}
+
+footer{
+    color: white;
+    text-align: center;
+    font-style: italic;
+}
+
+div{
+    text-align: center;
+    padding: 8px;
+    margin: 8px;
+}
+
+.container {
+    display: flex;
+    align-items: center; /* Alinha verticalmente os elementos ao centro */
+}
