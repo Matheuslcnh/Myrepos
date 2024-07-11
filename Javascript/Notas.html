@@ -64,9 +64,9 @@
             display: block;
             height: 10px;
         }
-        h5#resul{
+        h6#resul{
             font-family: 'Times New Roman', Times, serif;
-            padding: 5px;
+            padding: 8px;
             text-align: center;
         }
         form#formu{
@@ -135,7 +135,7 @@
                 var media = (parseFloat(nota1.value) + parseFloat(nota2.value) + parseFloat(nota3.value) + parseFloat(nota4.value))/4; 
                 //alert("A média das notas é: " + media);
                 res.style.textAlign = 'center'
-                res.innerHTML = '<strong><h5>A média das notas é:  '+media 
+                res.innerHTML = '<strong><h6>A média das notas é:  '+media 
             }
             
         </script>
@@ -155,7 +155,7 @@
             <p></p>
             <button type="submit" class="btn btn-outline-primary bot" value="enviar" onclick="calcular()">Calcular</button>
             <div id="res">
-                <h5 id="resul"><strong>Preencha os campos corretamente.</strong></h5>
+                <h6 id="resul"><strong>Preencha os campos corretamente.</strong></h6>
             </div>
         </form>
         <div class="rodape">Matheus Lourenço Cunha</div>
