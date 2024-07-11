@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,21 +11,21 @@
             height: 100%;
             margin: 0;
             padding: 0;
-            background-image: linear-gradient(to right, rgba(64, 64, 233, 0.61), rgba(35, 121, 35, 0.705), rgba(255, 255, 0, 0.363));
+            background-image: linear-gradient(to right, rgba(29, 31, 148, 0.555), rgba(255, 255, 0, 0.384));
         }
         .label{
             font-family: 'Times New Roman', Times, serif;
         }
         .bot{
             border-radius: 5px;
-            box-shadow: 1px 1px 1px 1px black; 
+            box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.363); 
             margin: auto; 
             font-family: 'Times New Roman', Times, serif;
         }
         .rodape{
             clear: both;
-            background-color: rgba(3, 59, 77, 0.712);
-            color: #fff;
+            background-color: rgba(3, 59, 77, 0.733);
+            color: #ece1e1;
             text-align: right;
             padding-right: 8px;
             font-family: Arial, Helvetica, sans-serif;
@@ -33,6 +33,7 @@
             font-size: 12px;
             height: 30px;
             vertical-align: middle;
+            width: 698px;
         }
         .cabecalho{
             float: left;
@@ -46,21 +47,56 @@
             background-size: cover;
             height: 180px;
             text-shadow: #000 2px 2px;
+            
         }
         .principal{
-            border: solid 0px #03c;
+            border: solid 0px rgba(0, 51, 204, 0.226);
             width: 1000px;
             margin: auto;
-            background-color: #fff;
-            box-shadow: #000 2px 2px 2px 2px;
-            border-radius: 10px;
+            background-color: #e61010;
+            box-shadow: #00000077 2px 2px 2px 2px;
+            border-radius: 5px;
+            align-items: center;
+            display: block;
+            height: 10px;
         }
+        h5#resul{
+            font-family: 'Times New Roman', Times, serif;
+            padding: 5px;
+            text-align: center;
+        }
+        form#formu{
+            display: block;
+            justify-items: center;
+            justify-content: center;
+            width: 698px;
+            align-items: center;
+        }
+        .form-container {
+            background-color: rgba(82, 224, 136, 0.479);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            width: 300px;
+        }
+        .container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: 100%;
+        }
+        
     </style>
 </head>
 <body>
     <div class="container" style="height: 80%;">
         <script>
+            
             function validaCampo(event){
+                var res = document.getElementById('res')
                 event.preventDefault();
                 
                 var nota1 = document.getElementById("nota1");
@@ -88,11 +124,14 @@
                     return false;
                 }
                 var media = (parseFloat(nota1.value) + parseFloat(nota2.value) + parseFloat(nota3.value) + parseFloat(nota4.value))/4; 
-                alert("A média das notas é: " + media);
+                //alert("A média das notas é: " + media);
+                res.style.textAlign = 'center'
+                res.innerHTML = '<strong><h5>A média das notas é:  '+media 
             }
+            
         </script>
 
-        <form onsubmit="validaCampo(event)" class="form-control" style="background-color: rgba(74, 237, 243, 0.616);">
+        <form onsubmit="validaCampo(event)" class="form-control" id="formu" style="background-color: rgba(82, 224, 136, 0.479);">
             <h3 style="font-family: 'Times New Roman', Times, serif;">Função de Médias</h3>
             <p></p>
             <label for="nota1" class="label">Nota 1</label>
@@ -105,9 +144,14 @@
             <input type="number" placeholder="Digite a nota: " class="form-control" name="nota4" id="nota4">
             
             <p></p>
-            <button type="submit" class="btn btn-outline-primary bot" value="enviar">Calcular</button>
+            <button type="submit" class="btn btn-outline-primary bot" value="enviar" onclick="calcular()">Calcular</button>
+            <div id="res">
+                <h5 id="resul"><strong>Preencha os campos corretamente.</strong></h5>
+            </div>
         </form>
         <div class="rodape">Matheus Lourenço Cunha</div>
     </div>
 </body>
-</html>
+</html
+
+
