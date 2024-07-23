@@ -47,6 +47,11 @@
  <p></p>
  <h2 style="color: blue">Python</h2>
  <a href="https://github.com/Matheuslcnh/Curso-Python" target="_blank">Explore the Python repository</a>
+ <p></p>
+ <h2 style="color: blue">PHP</h2>
+ <a href="https://github.com/Matheuslcnh/Myrepos/tree/main/PHP" target="_blank">Explore the PHP repository</a>
+ 
+ 
 
  <h3>Social media</h3>
  <div>
