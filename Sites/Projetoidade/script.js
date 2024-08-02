@@ -3,6 +3,10 @@ function verificar(){
     var ano = data.getFullYear()
     var fano = document.getElementById('txtano')
     var res = document.getElementById('res')
+    if (fano.value.length == 0 || Number(fano.value) < 1930 || Number(fano.value) > ano) {
+        alert('[Erro] Ano inválido. Insira um ano entre 1930 e o ano atual.');
+        return; // Sai da função se houver erro
+    }
     if (fano.value.length == 0 || Number(fano.value) > ano){
         alert('[Erro] Verifique os dados e tente novamente!')
     } else {
