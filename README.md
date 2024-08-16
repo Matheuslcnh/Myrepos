@@ -71,6 +71,7 @@
   <a href="https://www.instagram.com/_23matusy/" target="_blank"><img src="https://img.shields.io/badge/Instagram-E4405F?style=for-the-badge&logo=instagram&logoColor=white" target="_blank" /></a>
   <a href="https://github.com/Matheuslcnh/" target="_blank"><img src="https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white" target="_blank" /></a>
   <a href="https://www.linkedin.com/in/matheus-louren%C3%A7o-cunha-5b05242b5/" target="_blank"><img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" target="_blank" /></a>
+    <a href="https://www.behance.net/matheuslouren1" target="_blank"><img src="https://img.shields.io/badge/Behance-0054F7?style=for-the-badge&logo=behance&logoColor=white" target="_blank" /></a>
 </div>
 
 
