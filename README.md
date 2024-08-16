@@ -45,7 +45,7 @@
  
 
  <p></p>
-<h2 style="color: blue">Java Script</h2>
+<h2 style="color: blue">JavaScript</h2>
  <li><a href="https://matheuslcnh.github.io/Myrepos/Javascript/Notas.html" target="_blank">Run Site Notes</a>
  <p></p></li>
  <li><a href="https://matheuslcnh.github.io/Myrepos/Sites/ProjetoJS/modelo.html" target="_blank">Run Site Hours</a>
