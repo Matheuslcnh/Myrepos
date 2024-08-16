@@ -16,46 +16,53 @@
   <img align="center" alt="Matheus-Sql" src="https://img.shields.io/badge/MySQL-00000F?style=for-the-badge&logo=mysql&logoColor=white"/> 
   <img align="center" alt="Matheus-Lin" src="https://img.shields.io/badge/Linux-333333?style=for-the-badge&logo=linux&logoColor=white"/>
   <img align="center" alt="Matheus-Jav" src="https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white"/>
+  <img align="center" alt="Matheus-React" src="https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB"/>
+ 
+  <img align="center" alt="Matheus-Typescript" src="https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white"/>
+  <img align="center" alt="Matheus-Django" src="https://img.shields.io/badge/Django-092E20?style=for-the-badge&logo=django&logoColor=white"/>
+   <img align="center" alt="Matheus-C#" src="https://img.shields.io/badge/C%23-239120?style=for-the-badge&logo=c-sharp&logoColor=white"/>
+ 
 </div>
 
 <p></p>
 <h2 style="color: blue">HTML5 e CSS3</h2>
- 1.<a href="https://matheuslcnh.github.io/Myrepos/Sites/Android/android.html" target="_blank">Run the Android Website</a>
+
+ <li><a href="https://matheuslcnh.github.io/Myrepos/Sites/Android/android.html" target="_blank">Run the Android Website</a>
+ <p></p></li>
+ <li><a href="https://matheuslcnh.github.io/Myrepos/Sites/Cordel/cordel.html" target="_blank">Run the Cordel Site</a>
+ <p></p></li>
+ <li><a href="https://matheuslcnh.github.io/Myrepos/Sites/Projeto%20Social/Social.html" target="_blank">Run the social project Website</a></li>
  <p></p>
- 2.<a href="https://matheuslcnh.github.io/Myrepos/Sites/Cordel/cordel.html" target="_blank">Run the Cordel Site</a>
+ <li><a href="https://matheuslcnh.github.io/Myrepos/Sites/Projeto%20Login/index.html" target="_blank">Run the login project Website</a></li>
  <p></p>
- 3.<a href="https://matheuslcnh.github.io/Myrepos/Sites/Projeto%20Social/Social.html" target="_blank">Run the social project Website</a>
+ <li><a href="https://matheuslcnh.github.io/Myrepos/Sites/projeto%20host/index.html">Run the hDC HOST project Website</a>
+ <p></p></li>
+ <li><a href="https://matheuslcnh.github.io/Myrepos/Sites/projeto%20instagram/index.html">Run the Login Instagram project Website</a></li>
  <p></p>
- 4.<a href="https://matheuslcnh.github.io/Myrepos/Sites/Projeto%20Login/index.html" target="_blank">Run the login project Website</a>
- <p></p>
- 5.<a href="https://matheuslcnh.github.io/Myrepos/Sites/projeto%20host/index.html">Run the hDC HOST project Website</a>
- <p></p>
- 6.<a href="https://matheuslcnh.github.io/Myrepos/Sites/projeto%20instagram/index.html">Run the Login Instagram project Website</a>
- <p></p>
- 7.<a href="https://matheuslcnh.github.io/Myrepos/Sites/projeto%20login2/index.html">Run the Login 2 project Website</a>
- <p></p>
+ <li><a href="https://matheuslcnh.github.io/Myrepos/Sites/projeto%20login2/index.html">Run the Login 2 project Website</a>
+ <p></p></li>
 
  
 
  <p></p>
 <h2 style="color: blue">Java Script</h2>
- 1.<a href="https://matheuslcnh.github.io/Myrepos/Javascript/Notas.html" target="_blank">Run Site Notes</a>
+ <li><a href="https://matheuslcnh.github.io/Myrepos/Javascript/Notas.html" target="_blank">Run Site Notes</a>
+ <p></p></li>
+ <li><a href="https://matheuslcnh.github.io/Myrepos/Sites/ProjetoJS/modelo.html" target="_blank">Run Site Hours</a>
+ <p></p></li>
+ <li><a href="https://matheuslcnh.github.io/Myrepos/Sites/Projetoidade/idade.html" target="_blank">Run Site Years</a>
+ <p></p></li>
+<li><a href="https://matheuslcnh.github.io/Myrepos/Sites/ProjetoTabuada/modelo.html" target="_blank">Run the Tabuada Website</a></li>
  <p></p>
- 2.<a href="https://matheuslcnh.github.io/Myrepos/Sites/ProjetoJS/modelo.html" target="_blank">Run Site Hours</a>
+ <li><a href="https://matheuslcnh.github.io/Myrepos/Sites/ProjetoContar/modelo.html" target="_blank">Run the Contar Website</a></li>
  <p></p>
- 3.<a href="https://matheuslcnh.github.io/Myrepos/Sites/Projetoidade/idade.html" target="_blank">Run Site Years</a>
- <p></p>
- 4.<a href="https://matheuslcnh.github.io/Myrepos/Sites/ProjetoTabuada/modelo.html" target="_blank">Run the Tabuada Website</a>
- <p></p>
- 5.<a href="https://matheuslcnh.github.io/Myrepos/Sites/ProjetoContar/modelo.html" target="_blank">Run the Contar Website</a>
- <p></p>
- 6.<a href="https://matheuslcnh.github.io/Myrepos/Sites/ProjetoValor/modelo.html" target="_blank">Run Value Website</a>
- <p></p>
+ <li><a href="https://matheuslcnh.github.io/Myrepos/Sites/ProjetoValor/modelo.html" target="_blank">Run Value Website</a>
+ <p></p></li>
  <h2 style="color: blue">Python</h2>
- <a href="https://github.com/Matheuslcnh/Curso-Python" target="_blank">Explore the Python repository</a>
- <p></p>
+ <li><a href="https://github.com/Matheuslcnh/Curso-Python" target="_blank">Explore the Python repository</a>
+ <p></p></li>
  <h2 style="color: blue">PHP</h2>
- <a href="https://github.com/Matheuslcnh/Myrepos/tree/main/PHP" target="_blank">Explore the PHP repository</a>
+ <li><a href="https://github.com/Matheuslcnh/Myrepos/tree/main/PHP" target="_blank">Explore the PHP repository</a></li>
  
  
 
