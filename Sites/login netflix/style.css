@@ -91,10 +91,10 @@ form button{
 
 @keyframes pulse{
     from{
-        box-shadow: 0 0 0 100 rgba(255 0 0.3);
+        box-shadow: 0 0 0 100 rgba(255 0 0.7);
     }
     to{
-        box-shadow: 0 0 0 155px rgba(255 0 0.3);
+        box-shadow: 0 0 0 155px rgba(255 0 0.7);
     }
 }
 
