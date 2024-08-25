@@ -49,7 +49,7 @@ section::after{
 
 .clock{
     position: relative;
-    width: 650px;
+    width: 600px;
     height: 250px;
     background: rgba(255, 255, 255, 0.05);
     z-index: 1000;
