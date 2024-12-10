@@ -64,6 +64,9 @@
  <li><a href="https://matheuslcnh.github.io/Myrepos/Sites/ProjetoContar/modelo.html" target="_blank">Run the Contar Website</a></li>
  <p></p>
  <li><a href="https://matheuslcnh.github.io/Myrepos/Sites/ProjetoValor/modelo.html" target="_blank">Run Value Website</a>
+ <p></p>
+ <li><a href="https://matheuslcnh.github.io/Myrepos/Sites/ProjetoQRCODE/index.html" target="_blank">Run QR CODE</a>
+  
  <p></p></li>
  <h2 style="color: blue">Python</h2>
  <li><a href="https://github.com/Matheuslcnh/Curso-Python" target="_blank">Explore the Python repository</a>
