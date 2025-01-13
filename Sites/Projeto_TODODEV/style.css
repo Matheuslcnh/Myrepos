@@ -157,3 +157,11 @@
     text-decoration: line-through;
     font-style: italic;
   }
+
+  @media (max-width: 568px){
+    body{
+      background-color: rgba(0, 0, 255, 0.247);
+      background-size: cover;
+    }
+
+  }
