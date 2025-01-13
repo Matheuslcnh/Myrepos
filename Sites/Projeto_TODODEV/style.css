@@ -8,7 +8,7 @@
   }
   
   body {
-    background-image: url("bg.jpg");
+    background-color: rgba(0, 0, 255, 0.596);;
     
     background-size: cover;
   }
@@ -163,5 +163,9 @@
       background-color: rgba(0, 0, 255, 0.247);
       background-size: cover;
     }
+    .todo {
+      flex-direction: column;
+      align-items: flex-start;
+  }
 
   }
