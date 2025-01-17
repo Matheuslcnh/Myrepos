@@ -74,6 +74,7 @@
  <li><a href="https://matheuslcnh.github.io/Myrepos/Sites/Projeto_TODODEV/index.html">Run To do DEV</a>
   <p></p>
  <li><a href="https://matheuslcnh.github.io/Myrepos/Sites/projetoGerarSenha/index.html">Run password generator</a>
+ <li><a href="https://matheuslcnh.github.io/Myrepos/Sites/DevNotes/index.html">Run DevNotes</a>
 
   
  <p></p></li>
