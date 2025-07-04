@@ -25,8 +25,8 @@
 </div>
 
 <p></p>
-<h2 style="color: blue">Portifólio</h2>
-<li><a href="https://matheuslcnh.github.io/Myrepos/Sites/portifolio/index.html" target="_blank">Meu Portifólio</a>
+<h2 style="color: blue">Portfólio</h2>
+<li><a href="https://matheuslcnh.github.io/Myrepos/Sites/portifolio/index.html" target="_blank">Meu Portfólio</a>
  <p></p></li>
 
 <p></p>
