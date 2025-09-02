@@ -1,0 +1,299 @@
+/* Resetando alguns estilos padrão */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Corpo da página ocupa a tela inteira */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #0f0f0f;
+    color: white;
+    height: 100vh; /* Altura da tela inteira */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+}
+
+/* Seção de boas-vindas ocupa 100% da altura */
+.welcome-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%; /* Largura total */
+    height: 100vh; /* Altura total */
+    background: linear-gradient(135deg, #1d1d1d, #4a4a4aa0);
+    border-radius: 15px;
+    padding: 50px;
+    box-sizing: border-box;
+}
+
+/* Alinhando o conteúdo à esquerda */
+.content {
+    max-width: 500px;
+    color: #fff;
+}
+
+/* Título */
+h2 {
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.highlight {
+    color: #f39c12; /* Laranja */
+}
+
+/* Texto de descrição */
+p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+}
+
+/* Botão de chamada para ação */
+.cta-button {
+    padding: 15px 30px;
+    background: linear-gradient(140deg, #c2a10d, #21211fbf );
+    color: white;
+    font-size: 1.4rem;
+    text-decoration: none;
+    border-radius: 30px;
+    display: inline-block;
+    transition: background-color 0.3s;
+    text-align: center;
+}
+
+.cta-button:hover {
+    background: linear-gradient(135deg,#c2a10dbf, #d4d72abf );
+}
+
+/* Estilo da imagem */
+.image {
+    flex-shrink: 0;
+    max-width: 500px;
+}
+
+.image img {
+    width: 100%;
+    height: auto;
+    border-radius: 15px;
+}
+
+/* Responsividade para telas menores */
+@media (max-width: 768px) {
+    .welcome-section {
+        flex-direction: column;
+        padding: 20px;
+        text-align: center;
+    }
+
+    .content {
+        max-width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .image img {
+        max-width: 90%;
+        margin-top: 20px;
+    }
+}
+
+/* Resetando alguns estilos padrão */
+
+
+/* Corpo da página ocupa a tela inteira */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #0f0f0f;
+    color: white;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+}
+
+/* Seção de Diferenciais */
+.differentials-section {
+    width: 100%;
+    text-align: center;
+    padding: 50px;
+    background-color: #1d1d1d;
+}
+
+.differentials-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+}
+
+.differential-cards {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-bottom: 30px;
+}
+
+.differential-card {
+    background-color: #333;
+    padding: 20px;
+    width: 250px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.differential-card img {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 15px;
+}
+
+.differential-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.differential-card p {
+    font-size: 1rem;
+    color: #ccc;
+}
+
+.cta-button {
+    padding: 15px 30px;
+    background-color: #f39c12;
+    color: white;
+    font-size: 1.4rem;
+    text-decoration: none;
+    border-radius: 30px;
+    display: inline-block;
+    transition: background-color 0.3s;
+    text-align: center;
+}
+
+.cta-button:hover {
+    background-color: #e67e22;
+}
+
+/* Seção de Missão */
+.mission-section {
+    width: 100%;
+    padding: 50px;
+    background-color: #2d2d2d;
+    text-align: center;
+}
+
+.mission-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.mission-section p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+}
+
+.mission-section .cta-button {
+    padding: 15px 30px;
+}
+
+/* Galeria de Imagens */
+.image-gallery {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin: 50px 0;
+}
+
+.image-gallery img {
+    width: 200px;
+    height: 200px;
+    border-radius: 10px;
+    object-fit: cover;
+}
+footer{
+    background: #ffab62;
+width: 100%;
+height: 100px;
+position: absolute;
+bottom: 0;
+left: 0;
+    
+}
+
+/* Estilo do Rodapé */
+.footer {
+    background-color: white;
+    color: black;
+    padding: 20px 0;
+    text-align: center;
+    position: relative;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.footer-logo {
+    max-width: 115px;
+}
+
+.social-icons {
+    display: flex;
+    gap: 40px;
+}
+
+.social-icon img {
+    width: 30px;
+    height: 30px;
+}
+
+.whatsapp-floating {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    background-color: #25D366;
+    border-radius: 50%;
+    padding: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.whatsapp-floating img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+}
+
+.footer p {
+    font-size: 1rem;
+    margin: 0;
+}
+
+
+
+/* Responsividade para telas menores */
+@media (max-width: 768px) {
+    .differentials-section {
+        padding: 20px;
+    }
+
+    .differential-cards {
+        flex-direction: column;
+    }
+
+    .image-gallery {
+        flex-direction: column;
+    }
+
+    .image-gallery img {
+        width: 100%;
+        height: auto;
+    }
+}
