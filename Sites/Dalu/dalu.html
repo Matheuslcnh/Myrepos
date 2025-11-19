@@ -1,0 +1,536 @@
+<!doctype html>
+<html lang="pt-br">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Dalu Eventos — Leme-SP</title>
+
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&family=Bebas+Neue&display=swap" rel="stylesheet">
+
+  <style>
+    :root{
+      --gold: #d4af37;
+      --gold-dark: #b78f28;
+      --bg-dark: #050505;
+      --muted: #bfbfbf;
+      --card-bg: rgba(255,255,255,0.02);
+      --info-highlight: #fff6d6; /* cor clara/dourada pálida para as infos solicitadas */
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      font-family:'Poppins',system-ui,Arial;
+      background:linear-gradient(180deg,var(--bg-dark) 0%, #0f0f0f 100%);
+      color: #eee;
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+      scroll-behavior: smooth;
+    }
+
+    /* NAV */
+    .navbar{
+      background:linear-gradient(90deg, rgba(0,0,0,0.65), rgba(0,0,0,0.25));
+      border-bottom:1px solid rgba(212,175,55,0.06);
+      padding:0.6rem 1rem;
+    }
+    .brand-gold{color:var(--gold); font-family:'Bebas Neue',sans-serif; letter-spacing:1px}
+    .nav-link{color:#ddd}
+    .nav-link:hover{color:var(--gold)}
+    .navbar-toggler{border-color:rgba(255,255,255,0.06)}
+
+    /* HERO */
+    .hero{padding:120px 0 60px; position:relative; overflow:hidden}
+    .hero-title{
+      font-family:'Bebas Neue',sans-serif;
+      font-size:3rem;
+      color:var(--gold);
+      margin-bottom:.4rem;
+      background: linear-gradient(90deg, rgba(255,255,255,0.95), rgba(212,175,55,0.6) );
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+      animation: shine 3.5s linear infinite;
+      background-size:200% 100%;
+    }
+    @keyframes shine{
+      0% { background-position:0% 50% }
+      50% { background-position:100% 50% }
+      100% { background-position:0% 50% }
+    }
+    .hero-sub{font-size:1.02rem; color:#dcdcdc}
+    .hero-card{background:var(--card-bg); border:1px solid rgba(212,175,55,0.08); padding:22px; border-radius:12px}
+
+    /* floating particles in hero */
+    .hero .particle{
+      position:absolute;
+      width:10px;
+      height:10px;
+      border-radius:50%;
+      background: radial-gradient(circle at 30% 30%, #fff9d9, var(--gold));
+      opacity:0.12;
+      filter: blur(1px);
+      animation: floatUp linear infinite;
+      pointer-events:none;
+    }
+    @keyframes floatUp{
+      0%{ transform: translateY(20px) scale(.9); opacity:0 }
+      10%{ opacity:0.14 }
+      50%{ transform: translateY(-120px) scale(1.05); opacity:0.18 }
+      100%{ transform: translateY(-260px) scale(1); opacity:0 }
+    }
+
+    /* Buttons */
+    .btn-gold{
+      background:var(--gold);
+      border:1px solid var(--gold-dark);
+      color:var(--black);
+      font-weight:600;
+      transition:transform .12s ease, box-shadow .12s;
+    }
+    .btn-gold:hover{transform:translateY(-3px); box-shadow:0 8px 30px rgba(212,175,55,0.12)}
+    .btn-outline-gold{
+      background:transparent;
+      border:1px solid var(--gold);
+      color:var(--gold);
+    }
+
+    /* Gallery grid */
+    .gallery{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+      gap:14px;
+    }
+    .gal-item{
+      background:var(--card-bg);
+      border-radius:10px;
+      overflow:hidden;
+      border:1px solid rgba(212,175,55,0.06);
+      transition:transform .18s ease, box-shadow .18s;
+    }
+    .gal-item:hover{transform:translateY(-6px); box-shadow:0 12px 30px rgba(0,0,0,0.5)}
+    .gal-item img{width:100%; height:160px; object-fit:cover; display:block}
+
+    /* Price cards */
+    .price-card{background:var(--card-bg); border-radius:12px; padding:20px; border:1px solid rgba(212,175,55,0.06)}
+    .price{font-size:1.6rem; color:var(--gold); font-weight:700}
+
+    /* Carousel (fullscreen) */
+    .carousel-inner .carousel-item img{
+      width:100%;
+      height:60vh;
+      object-fit:cover;
+    }
+
+    /* carousel thumbnails */
+    .carousel-thumbs{
+      display:flex;
+      gap:8px;
+      overflow-x:auto;
+      padding:10px 6px;
+      margin-top:12px;
+    }
+    .carousel-thumbs img{
+      width:88px;
+      height:56px;
+      object-fit:cover;
+      border-radius:6px;
+      border:2px solid transparent;
+      cursor:pointer;
+      transition:transform .12s ease, border-color .12s;
+    }
+    .carousel-thumbs img:hover{transform:translateY(-3px)}
+    .carousel-thumbs img.active-thumb{border-color:var(--gold); box-shadow:0 6px 20px rgba(0,0,0,0.5)}
+
+    /* Contact card */
+    .contact-card{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(0,0,0,0.12)); padding:18px; border-radius:12px; border:1px solid rgba(212,175,55,0.06)}
+
+    /* info-highlight: a cor clara em todo site para os trechos solicitados */
+    .info-highlight{ color: var(--info-highlight); font-weight:600; text-shadow: 0 1px 0 rgba(0,0,0,0.45); }
+
+    /* Animations: fade-up reveal */
+    .reveal{ opacity:0; transform: translateY(18px); transition: opacity .6s ease, transform .6s ease; will-change:transform,opacity }
+    .reveal.in-view{ opacity:1; transform: translateY(0) }
+
+    footer{background:#040404; color:#9b9b9b; padding:26px 0; border-top:1px solid rgba(212,175,55,0.04)}
+
+    /* Responsive tweaks */
+    @media (min-width:992px){
+      .hero-title{font-size:4.2rem}
+      .gal-item img{height:180px}
+      .carousel-inner .carousel-item img{height:68vh}
+    }
+    @media (max-width:480px){
+      .hero{padding:90px 0 40px}
+      .gal-item img{height:140px}
+      .carousel-inner .carousel-item img{height:48vh}
+      .carousel-thumbs img{width:72px; height:48px}
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav class="navbar navbar-expand-lg fixed-top">
+    <div class="container">
+      <a class="navbar-brand brand-gold fs-4" href="#">Dalu Eventos</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMain">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navMain">
+        <ul class="navbar-nav ms-auto align-items-lg-center">
+          <li class="nav-item"><a class="nav-link" href="#home">Início</a></li>
+          <li class="nav-item"><a class="nav-link" href="#pacotes">Pacotes</a></li>
+          <li class="nav-item"><a class="nav-link" href="#galeria">Galeria</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contato">Contato</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <header id="home" class="hero">
+    <!-- particles (only decorative) -->
+    <div class="particle" style="left:8%; bottom:10%; width:12px; height:12px; animation-duration:9s; animation-delay:0s"></div>
+    <div class="particle" style="left:22%; bottom:6%; width:8px; height:8px; animation-duration:7.8s; animation-delay:1s"></div>
+    <div class="particle" style="left:60%; bottom:4%; width:10px; height:10px; animation-duration:8.6s; animation-delay:.6s"></div>
+    <div class="particle" style="left:80%; bottom:12%; width:14px; height:14px; animation-duration:10s; animation-delay:0.2s"></div>
+
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-lg-6 mb-4 mb-lg-0 reveal">
+          <h1 class="hero-title">Dalu Eventos</h1>
+          <p class="hero-sub mb-3">Salão de festas em <strong class="info-highlight">Leme - SP</strong>. Elegância, atendimento personalizado e memória inesquecível — eventos corporativos, casamentos e aniversários.</p>
+
+          <div class="d-flex gap-2">
+            <a href="#contato" class="btn btn-gold btn-lg">Peça Orçamento <i class="bi bi-send ms-2"></i></a>
+            <a href="#galeria" class="btn btn-outline-gold btn-lg">Ver Galeria</a>
+          </div>
+
+          <div class="mt-4 hero-card d-flex gap-3 align-items-center reveal">
+            <div style="width:64px;height:64px;border-radius:10px;background:rgba(0,0,0,0.3);display:flex;align-items:center;justify-content:center;border:1px solid rgba(212,175,55,0.06)">
+              <i class="bi bi-geo-alt" style="color:var(--gold);font-size:1.4rem"></i>
+            </div>
+            <div>
+              <small class="text-muted">Endereço</small>
+              <div><strong class="info-highlight">Rua Alfredo Lopes, nº 1230 — Bairro Graminha — Leme / SP</strong></div>
+              <small class="text-muted">Capacidade: <span class="info-highlight">até 900 pessoas</span></small>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-6 text-center reveal">
+          <!-- imagem principal -->
+          <div style="max-width:680px;margin:0 auto;border-radius:14px;overflow:hidden;border:2px solid rgba(212,175,55,0.06)">
+            <img src="dalu.jpg" alt="Imagem do salão" style="width:100%;height:360px;object-fit:cover;display:block" loading="lazy">
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- PACOTES / PREÇOS -->
+  <section id="pacotes" class="py-5">
+    <div class="container">
+      <div class="text-center mb-4 reveal">
+        <h2 class="brand-gold">Nossos Pacotes</h2>
+        <p class="text-muted">Alugamos apenas o local — não fornecemos buffet, som ou DJ. Horários a combinar.</p>
+      </div>
+
+      <div class="row g-4">
+        <div class="col-md-6 col-lg-4 reveal">
+          <div class="price-card h-100">
+            <h5 class="mb-2">Casamento (Aluguel do espaço)</h5>
+            <div class="price">R$ 5.500</div>
+            <p class="small text-muted">Horário a combinar • <span class="info-highlight">Até 900 pessoas</span></p>
+            <ul class="small">
+              <li>Piso inferior e superior</li>
+              <li>Camarim e bilheteria (se necessário)</li>
+              <li>Amplas áreas internas e externa</li>
+            </ul>
+            <a href="#contato" class="btn btn-gold w-100 mt-3">Solicitar Reserva</a>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4 reveal">
+          <div class="price-card h-100">
+            <h5 class="mb-2">Evento Corporativo / Confraternização</h5>
+            <div class="price">R$ 4.200</div>
+            <p class="small text-muted">Horário a combinar • <span class="info-highlight">Capacidade até 900</span></p>
+            <ul class="small">
+              <li>Quiosque com 2 churrasqueiras e forno de pizza</li>
+              <li>Cozinha ampla com fogão industrial</li>
+              <li>Área verde e estacionamento (ver disponibilidade)</li>
+            </ul>
+            <a href="#contato" class="btn btn-outline-gold w-100 mt-3">Fazer Cotação</a>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4 reveal">
+          <div class="price-card h-100">
+            <h5 class="mb-2">Aniversário (Aluguel do espaço)</h5>
+            <div class="price">R$ 950</div>
+            <p class="small text-muted">Pacote compacto • 4 horas • mesas e cadeiras</p>
+            <ul class="small">
+              <li>Mesas e cadeiras inclusas</li>
+              <li>Banheiros acessíveis</li>
+              <li>Possibilidade de estender horário</li>
+            </ul>
+            <a href="#contato" class="btn btn-outline-gold w-100 mt-3">Solicitar</a>
+          </div>
+        </div>
+      </div>
+
+      <p class="small text-muted mt-3 reveal">*Formas de pagamento: Cartão (débito/crédito), PIX. Parcelamento: até 2x s/ juros (ou 3x com juros) — exceções para eventos especiais.</p>
+    </div>
+  </section>
+
+  <!-- ESTRUTURA -->
+  <section id="estrutura" class="py-4 bg-black">
+    <div class="container">
+      <div class="row g-4 align-items-center">
+        <div class="col-lg-6 reveal">
+          <h4 class="brand-gold">Estrutura do salão</h4>
+          <ul class="small text-muted">
+            <li>Piso Inferior: Banheiros, cozinha ampla com fogão industrial, bar e bilheteria.</li>
+            <li>Piso Superior: Banheiro, camarim e bar.</li>
+            <li>Área externa: Quiosque com 2 churrasqueiras, 1 forno de pizza, 2 freezers e área verde.</li>
+            <li>Banheiros: feminino, masculino e acessível para PCD.</li>
+            <li>Capacidade máxima: <strong class="info-highlight">900 pessoas</strong>.</li>
+            <li>Observação: <span class="info-highlight">Alugamos apenas o local — não fornecemos buffet, som, DJ ou música ao vivo.</span></li>
+          </ul>
+        </div>
+        <div class="col-lg-6 reveal">
+          <div class="ratio ratio-16x9 rounded-3 overflow-hidden" style="border:1px solid rgba(212,175,55,0.06)">
+            <img src="estrulogo.jpg" alt="Estrutura Dalu" style="width:100%;height:100%;object-fit:cover;display:block" loading="lazy">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- GALERIA -->
+  <section id="galeria" class="py-5">
+    <div class="container">
+      <div class="d-flex justify-content-between align-items-center mb-3 reveal">
+        <div>
+          <h3 class="brand-gold mb-0">Galeria</h3>
+          <small class="text-muted">Imagens extraídas do material informativo (substitua pelas fotos finais)</small>
+        </div>
+        <div>
+          <button class="btn btn-gold btn-sm" data-bs-toggle="modal" data-bs-target="#galleryModal">Ver em tela cheia</button>
+        </div>
+      </div>
+
+      <div class="gallery" id="galleryGrid">
+        <!-- Caso queira usar salao1..salao37, troque os src aqui -->
+        <div class="gal-item reveal"><img src="parte de cima.jpg" alt="Parte superior" loading="lazy"></div>
+        <div class="gal-item reveal"><img src="parte inferior.jpg" alt="Parte inferior" loading="lazy"></div>
+        <div class="gal-item reveal"><img src="cozinha.jpg" alt="Cozinha / Bilheteria" loading="lazy"></div>
+        <div class="gal-item reveal"><img src="externa.jpg" alt="Área externa" loading="lazy"></div>
+        <div class="gal-item reveal"><img src="banheiros.jpg" alt="Banheiros" loading="lazy"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Modal da galeria (fullscreen carousel + thumbs) -->
+  <div class="modal fade" id="galleryModal" tabindex="-1">
+    <div class="modal-dialog modal-fullscreen">
+      <div class="modal-content bg-black">
+        <div class="modal-header border-0">
+          <button class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+        </div>
+
+        <div class="modal-body p-0">
+          <div class="container-fluid px-0">
+            <div id="galCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="4000">
+              <div class="carousel-inner" id="carouselInner">
+                <!-- slides serão gerados automaticamente por JS a partir da galeria -->
+              </div>
+
+              <button class="carousel-control-prev" type="button" data-bs-target="#galCarousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon"></span>
+                <span class="visually-hidden">Anterior</span>
+              </button>
+              <button class="carousel-control-next" type="button" data-bs-target="#galCarousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon"></span>
+                <span class="visually-hidden">Próximo</span>
+              </button>
+            </div>
+
+            <div class="carousel-thumbs mt-3 px-3" id="carouselThumbs" aria-hidden="false">
+              <!-- thumbnails geradas por JS -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- CONTATO -->
+  <section id="contato" class="py-5">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-lg-6 reveal">
+          <div class="contact-card">
+            <h4 class="brand-gold">Peça um orçamento</h4>
+            <p class="text-muted small">Diga a data, tipo de evento e número de convidados.</p>
+            <form id="formOrcamento" onsubmit="event.preventDefault(); alert('Orçamento enviado — vamos entrar em contato!')">
+              <div class="mb-3">
+                <label class="form-label">Nome</label>
+                <input class="form-control" required placeholder="Seu nome">
+              </div>
+              <div class="mb-3 row g-2">
+                <div class="col-6"><label class="form-label">Telefone</label><input class="form-control" placeholder="(19) 9xxxx-xxxx"></div>
+                <div class="col-6"><label class="form-label">E-mail</label><input class="form-control" placeholder="seu@email.com"></div>
+              </div>
+              <div class="mb-3">
+                <label class="form-label">Data</label>
+                <input type="date" class="form-control">
+              </div>
+              <div class="mb-3">
+                <label class="form-label">Mensagem</label>
+                <textarea class="form-control" rows="4" placeholder="Detalhes do evento"></textarea>
+              </div>
+              <div class="d-flex gap-2">
+                <button class="btn btn-gold">Enviar</button>
+                <a id="whatsBtn" class="btn btn-outline-gold" target="_blank" href="#">WhatsApp</a>
+              </div>
+            </form>
+          </div>
+        </div>
+
+        <div class="col-lg-6 reveal">
+          <div class="contact-card h-100">
+            <h5 class="mb-2">Informações</h5>
+            <p class="small text-muted mb-1"><strong>Endereço:</strong> <span class="info-highlight">Rua Alfredo Lopes, nº 1230 — Bairro Graminha — Leme / SP</span></p>
+            <p class="small text-muted mb-1"><strong>Capacidade:</strong> <span class="info-highlight">até 900 pessoas</span></p>
+            <p class="small text-muted mb-1"><strong>Alugamos para:</strong> <span class="info-highlight">casamento, aniversário, confraternização e eventos.</span></p>
+            <p class="small text-muted mb-0"><strong>Observação:</strong> <span class="info-highlight">Alugamos apenas o local — não fornecemos buffet, som, DJ ou música ao vivo.</span></p>
+
+            <hr>
+            <div class="ratio ratio-16x9 rounded-3 overflow-hidden mt-3" style="border:1px solid rgba(212,175,55,0.06)">
+              <iframe src="https://www.google.com/maps?q=Rua+Alfredo+Lopes+1230+Leme+SP&output=embed" style="border:0;" allowfullscreen loading="lazy"></iframe>
+            </div>
+
+            <div class="mt-3 small text-muted">Formas de pagamento: Cartão de crédito/débito, PIX. Parcelamento: até 2x sem juros (3x com juros) — exceções para eventos especiais.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- RODAPÉ -->
+  <footer>
+    <div class="container d-flex justify-content-between align-items-center">
+      <div>
+        <strong class="brand-gold">Dalu Eventos</strong>
+        <div class="small text-muted">RUA ALFREDO LOPES, nº 1230 — Bairro Graminha • Leme - SP</div>
+      </div>
+      <div class="small text-muted">© <span id="ano"></span> Dalu Eventos — Todos os direitos reservados</div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    // year
+    document.getElementById('ano').textContent = new Date().getFullYear();
+
+    // Build carousel slides and thumbs from gallery images automatically
+    (function buildCarouselFromGallery(){
+      const galleryImgs = Array.from(document.querySelectorAll('#galleryGrid img'));
+      const carouselInner = document.getElementById('carouselInner');
+      const thumbs = document.getElementById('carouselThumbs');
+
+      if(!galleryImgs.length) return;
+
+      galleryImgs.forEach((img, i) => {
+        // slide
+        const slide = document.createElement('div');
+        slide.className = 'carousel-item' + (i===0 ? ' active' : '');
+        const slideImg = document.createElement('img');
+        slideImg.src = img.src;
+        slideImg.alt = img.alt || ('slide-'+(i+1));
+        slideImg.loading = 'lazy';
+        slide.appendChild(slideImg);
+        carouselInner.appendChild(slide);
+
+        // thumb
+        const t = document.createElement('img');
+        t.src = img.src;
+        t.alt = img.alt || ('thumb-'+(i+1));
+        t.loading = 'lazy';
+        if(i===0) t.classList.add('active-thumb');
+        t.addEventListener('click', () => {
+          const carousel = bootstrap.Carousel.getInstance(document.getElementById('galCarousel')) ||
+                           new bootstrap.Carousel(document.getElementById('galCarousel'));
+          carousel.to(i);
+          document.querySelectorAll('.carousel-thumbs img').forEach(x=>x.classList.remove('active-thumb'));
+          t.classList.add('active-thumb');
+        });
+        thumbs.appendChild(t);
+      });
+
+      // sync thumb active with slide events
+      const galCarouselEl = document.getElementById('galCarousel');
+      galCarouselEl.addEventListener('slid.bs.carousel', (ev) => {
+        const idx = ev.to;
+        document.querySelectorAll('.carousel-thumbs img').forEach((x, j) => {
+          x.classList.toggle('active-thumb', j===idx);
+        });
+      });
+
+      // pause on hover
+      galCarouselEl.addEventListener('mouseenter', () => {
+        const c = bootstrap.Carousel.getInstance(galCarouselEl);
+        if(c) c.pause();
+      });
+      galCarouselEl.addEventListener('mouseleave', () => {
+        const c = bootstrap.Carousel.getInstance(galCarouselEl);
+        if(c) c.cycle();
+      });
+    })();
+
+    // gallery images open modal at respective slide
+    document.querySelectorAll('#galleryGrid .gal-item img').forEach((el, idx) => {
+      el.style.cursor = 'pointer';
+      el.addEventListener('click', () => {
+        const modal = new bootstrap.Modal(document.getElementById('galleryModal'));
+        modal.show();
+        setTimeout(() => {
+          const carousel = new bootstrap.Carousel(document.getElementById('galCarousel'));
+          carousel.to(idx);
+        }, 60);
+      });
+    });
+
+    // reveal on scroll using IntersectionObserver
+    (function revealOnScroll(){
+      const obs = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+          if(entry.isIntersecting){
+            entry.target.classList.add('in-view');
+            // optional: unobserve so animation only once
+            obs.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.12 });
+
+      document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
+    })();
+
+    // whatsapp placeholder (replace number)
+    document.getElementById('whatsBtn').href = 'https://wa.me/1935545498?text=Olá%20Dalu%20Eventos%20-%20gostaria%20de%20um%20orçamento';
+
+    // tiny enhancement: animate particles with random delay (so not perfectly uniform)
+    document.querySelectorAll('.hero .particle').forEach((p, i) => {
+      const dur = 7 + Math.random()*5;
+      const delay = Math.random()*2;
+      p.style.animationDuration = dur + 's';
+      p.style.animationDelay = delay + 's';
+    });
+  </script>
+</body>
+</html>
