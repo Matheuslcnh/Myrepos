@@ -41,10 +41,15 @@ h1,h2,h3,h4,h5{color:#f7f7f7}
       border-bottom:1px solid rgba(212,175,55,0.06);
       padding:0.6rem 1rem;
     }
-    .brand-gold{color:var(--gold); font-family:'Bebas Neue',sans-serif; letter-spacing:1px}
+    .brand-gold{color:var(--gold); font-family:'Bebas Neue',sans-serif; letter-spacing:1px;  transition: color .25s ease, transform .25s ease, text-shadow .25s ease;}
     .nav-link{color:#ddd}
     .nav-link:hover{color:var(--gold)}
     .navbar-toggler{border-color:rgba(255,255,255,0.06)}
+    .brand-gold:hover{
+  color: var(--info-highlight);
+  transform: translateY(-2px);
+  text-shadow: 0 0 10px rgba(212,175,55,.35);
+}
     /* Hover Instagram Footer */
 footer a{
   transition: color .25s ease, transform .25s ease;
@@ -229,13 +234,13 @@ footer{
 <body>
 
   <!-- NAV -->
-  <nav class="navbar navbar-expand-lg fixed-top">
+  <nav class="navbar navbar-expand-lg fixed-top" >
     <div class="container">
       <a class="navbar-brand brand-gold fs-4" href="#">Dalu Eventos</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMain">
         <span class="navbar-toggler-icon"></span>
       </button>
-      <div class="collapse navbar-collapse" id="navMain">
+      <div class="collapse navbar-collapse" id="navMain" >
         <ul class="navbar-nav ms-auto align-items-lg-center">
           <li class="nav-item"><a class="nav-link" href="#home">Início</a></li>
           <li class="nav-item"><a class="nav-link" href="#pacotes">Pacotes</a></li>
