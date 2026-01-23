@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<title>Contato | Liceu Gloriam Dei – Leme/SP</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:Arial, Helvetica, sans-serif;
+}
+
+:root{
+  --verde:#0b5d3b;
+  --verde-escuro:#06402a;
+  --cinza:#f4f4f4;
+}
+
+body{
+  color:#2b2b2b;
+  line-height:1.6;
+}
+
+/* HEADER */
+header{
+  background:var(--verde);
+  color:#fff;
+  padding:60px 20px;
+  text-align:center;
+}
+
+header h1{
+  font-size:36px;
+}
+
+/* CONTAINER */
+section{
+  padding:70px 20px;
+}
+
+.container{
+  width:90%;
+  max-width:1100px;
+  margin:auto;
+}
+
+/* GRID */
+.contato-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:50px;
+}
+
+/* FORM */
+form{
+  background:#fff;
+  border:2px solid var(--verde);
+  padding:40px;
+  border-radius:6px;
+}
+
+form h2{
+  color:var(--verde);
+  margin-bottom:20px;
+}
+
+label{
+  display:block;
+  margin-bottom:5px;
+  font-weight:bold;
+}
+
+input, textarea{
+  width:100%;
+  padding:12px;
+  margin-bottom:20px;
+  border:1px solid #ccc;
+  border-radius:4px;
+  font-size:15px;
+}
+
+textarea{
+  resize:vertical;
+  min-height:120px;
+}
+
+button{
+  background:var(--verde);
+  color:#fff;
+  border:none;
+  padding:14px;
+  width:100%;
+  font-size:16px;
+  font-weight:bold;
+  cursor:pointer;
+  border-radius:4px;
+}
+
+button:hover{
+  background:var(--verde-escuro);
+}
+
+/* INFO */
+.info-contato{
+  background:var(--cinza);
+  padding:40px;
+  border-radius:6px;
+}
+
+.info-contato h2{
+  color:var(--verde);
+  margin-bottom:20px;
+}
+
+.info-contato p{
+  margin-bottom:15px;
+}
+
+.info-contato strong{
+  color:var(--verde);
+}
+
+/* CTA */
+.cta-visita{
+  margin-top:30px;
+  padding:25px;
+  background:var(--verde);
+  color:#fff;
+  text-align:center;
+  border-radius:6px;
+}
+
+.cta-visita h3{
+  margin-bottom:10px;
+}
+
+/* MAPA */
+.mapa{
+  margin-top:50px;
+}
+
+/* FOOTER */
+footer{
+  background:var(--verde-escuro);
+  color:#fff;
+  text-align:center;
+  padding:30px 20px;
+  margin-top:70px;
+}
+
+/* RESPONSIVO */
+@media(max-width:900px){
+  .contato-grid{
+    grid-template-columns:1fr;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <h1>Contato e Localização</h1>
+  <p>Agende uma visita e conheça o Liceu Gloriam Dei</p>
+</header>
+
+<section>
+  <div class="container contato-grid">
+
+    <!-- FORMULÁRIO -->
+    <form>
+      <h2>Envie sua mensagem</h2>
+
+      <label for="nome">Nome completo</label>
+      <input type="text" id="nome" name="nome" required>
+
+      <label for="email">E-mail</label>
+      <input type="email" id="email" name="email">
+
+      <label for="telefone">Telefone</label>
+      <input type="tel" id="telefone" name="telefone" required>
+
+      <label for="mensagem">Mensagem</label>
+      <textarea id="mensagem" name="mensagem" required></textarea>
+
+      <button type="submit">Enviar mensagem</button>
+    </form>
+
+    <!-- INFORMAÇÕES -->
+    <div class="info-contato">
+      <h2>Fale conosco</h2>
+
+      <p><strong>Telefone:</strong><br>
+      (19) 0000-0000</p>
+
+      <p><strong>E-mail:</strong><br>
+      contato@liceugloriamdei.com.br</p>
+
+      <p><strong>Endereço:</strong><br>
+      Rua/Av. XXXXX, nº XXX<br>
+      Leme – SP</p>
+
+      <p>
+        Nossa equipe está à disposição para esclarecer dúvidas,
+        apresentar nossa proposta pedagógica e orientar sobre
+        matrículas.
+      </p>
+
+      <div class="cta-visita">
+        <h3>Agende uma visita</h3>
+        <p>Venha conhecer nossa estrutura e metodologia de ensino.</p>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- MAPA -->
+  <div class="container mapa">
+    <iframe
+      src="https://www.google.com/maps?q=Leme%20SP&output=embed"
+      width="100%"
+      height="350"
+      style="border:0;border-radius:6px"
+      loading="lazy">
+    </iframe>
+  </div>
+</section>
+
+<footer>
+  <p>Liceu Gloriam Dei – Leme/SP</p>
+  <p>Sistema de Ensino ETAPA</p>
+</footer>
+
+</body>
+</html>

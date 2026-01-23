@@ -29,6 +29,7 @@
       -webkit-font-smoothing:antialiased;
       -moz-osx-font-smoothing:grayscale;
       scroll-behavior: smooth;
+      
     }
     /* TIPOGRAFIA */
 p,li,span,small{color:var(--text-soft)}
@@ -188,6 +189,9 @@ footer a:hover{
 footer{
   background:#040404;
   border-top:1px solid rgba(212,175,55,0.08);
+  margin-top: auto;
+  padding-top: 32px;
+  padding-bottom: 24px;
 }
 
 /* Links sociais */
@@ -199,6 +203,33 @@ footer{
   gap:6px;
   font-size:.95rem;
   transition: all .25s ease;
+}
+section:last-of-type {
+  padding-bottom: 0 !important;
+  margin-bottom: 0 !important;
+}
+
+/* remove margens internas que empurram o footer */
+section:last-of-type p:last-child,
+section:last-of-type .container > *:last-child {
+  margin-bottom: 0 !important;
+}
+
+/* footer encostado corretamente */
+footer {
+  margin-top: 0 !important;
+}
+#contato {
+  padding-bottom: 0 !important;
+}
+
+#contato p:last-child {
+  margin-bottom: 0;
+}
+
+/* garante que o footer encoste corretamente */
+footer {
+  margin-top: 0 !important;
 }
 
 .footer-link i{
@@ -713,7 +744,6 @@ footer{
   </div>
 </div>
 
-</section>
 <!-- CONTATO -->
   <section id="contato" class="py-5">
     <div class="container">

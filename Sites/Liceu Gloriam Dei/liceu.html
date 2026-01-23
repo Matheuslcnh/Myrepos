@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<title>Liceu Gloriam Dei | Sistema de Ensino ETAPA – Leme/SP</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:Arial, Helvetica, sans-serif}
+body{color:#2b2b2b;line-height:1.6}
+
+/* CORES */
+:root{
+  --verde:#0b5d3b;
+  --verde-escuro:#06402a;
+  --cinza:#f4f4f4;
+}
+
+/* HEADER */
+header{
+  background:var(--verde);
+  color:#fff;
+  padding:20px 0;
+}
+.header-container{
+  width:90%;
+  max-width:1200px;
+  margin:auto;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+}
+nav a{
+  color:#fff;
+  text-decoration:none;
+  margin-left:20px;
+  font-weight:bold;
+}
+nav a.cta{
+  background:#fff;
+  color:var(--verde);
+  padding:8px 16px;
+  border-radius:4px;
+}
+
+/* HERO */
+.hero{
+  height:80vh;
+  background:linear-gradient(rgba(11,93,59,.75),rgba(11,93,59,.75)),url("hero.jpg") center/cover;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  color:#fff;
+}
+.hero h1{font-size:48px;margin-bottom:20px}
+.hero p{font-size:20px;margin-bottom:30px}
+.hero a{
+  background:#fff;
+  color:var(--verde);
+  padding:14px 28px;
+  text-decoration:none;
+  font-weight:bold;
+  border-radius:5px;
+}
+
+/* SEÇÕES */
+section{padding:70px 0}
+.container{width:90%;max-width:1200px;margin:auto}
+
+/* ETAPA */
+.etapa{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:40px;
+  align-items:center;
+}
+.etapa h2{color:var(--verde);margin-bottom:20px}
+
+/* SEGMENTOS */
+.segmentos{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  gap:30px;
+}
+.card{
+  border:2px solid var(--verde);
+  padding:30px;
+  text-align:center;
+}
+.card h3{color:var(--verde);margin-bottom:15px}
+.card a{
+  display:inline-block;
+  margin-top:15px;
+  color:var(--verde);
+  font-weight:bold;
+  text-decoration:none;
+}
+
+/* FOOTER */
+footer{
+  background:var(--verde-escuro);
+  color:#fff;
+  text-align:center;
+  padding:30px 20px;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <div class="header-container">
+    <h2>Liceu Gloriam Dei</h2>
+    <nav>
+      <a href="index.html">Início</a>
+      <a href="sobre.html">Sobre</a>
+      <a href="educacao-infantil.html">Educação Infantil</a>
+      <a href="ensino-fundamental.html">Ensino Fundamental</a>
+      <a href="ensino-medio.html">Ensino Médio</a>
+      <a href="#" class="cta">Matrículas</a>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div>
+    <h1>Educação que forma conhecimento e valores</h1>
+    <p>Excelência acadêmica com o Sistema de Ensino ETAPA</p>
+    <a href="sobre.html">Conheça o Liceu</a>
+  </div>
+</section>
+
+<section>
+  <div class="container etapa">
+    <div>
+      <h2>Sistema de Ensino ETAPA</h2>
+      <p>
+        O Liceu Gloriam Dei adota o Sistema de Ensino ETAPA, referência
+        nacional em educação, reconhecido pela qualidade do material
+        didático, metodologia estruturada e alto desempenho acadêmico.
+      </p>
+      <p>
+        O ETAPA promove o desenvolvimento do raciocínio lógico,
+        interpretação de textos, organização dos estudos e preparação
+        consistente para vestibulares e ENEM.
+      </p>
+    </div>
+    <div>
+      <img src="etapa.jpg" alt="Sistema ETAPA" style="width:100%;border-radius:8px">
+    </div>
+  </div>
+</section>
+
+<section style="background:#f4f4f4">
+  <div class="container segmentos">
+    <div class="card">
+      <h3>Educação Infantil</h3>
+      <p>Aprender brincando, com afeto e desenvolvimento integral.</p>
+      <a href="educacao-infantil.html">Saiba mais</a>
+    </div>
+
+    <div class="card">
+      <h3>Ensino Fundamental</h3>
+      <p>Base sólida para autonomia, organização e pensamento crítico.</p>
+      <a href="ensino-fundamental.html">Saiba mais</a>
+    </div>
+
+    <div class="card">
+      <h3>Ensino Médio</h3>
+      <p>Preparação completa para vestibulares e vida acadêmica.</p>
+      <a href="ensino-medio.html">Saiba mais</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <p>Liceu Gloriam Dei – Leme/SP</p>
+  <p>Sistema de Ensino ETAPA</p>
+</footer>
+
+</body>
+</html>
