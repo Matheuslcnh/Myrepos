@@ -222,19 +222,15 @@ body {
 }
 
 .lista-navegacao li {
-    font-size: 2.5rem;
-    transition: all.3s ease;
-    cursor: pointer;
-    text-decoration: none;
-    padding: 5px 15px; 
-    transition: all 0.3s ease;
-    border-radius: 50%; 
-    border: 2px solid transparent;
+    width: 100%;
+    text-align: center;
+    font-size: 1.5rem;
+    padding: 0.7rem 0;
+    transition: background-color 0.3s ease;
 }
 
 .lista-navegacao li:hover {
-    color: var(--blue); 
-    border-color: var(--blue);
+    background-color: var(--blue);
 }
 
 /* HOME */
