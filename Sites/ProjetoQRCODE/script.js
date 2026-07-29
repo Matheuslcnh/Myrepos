@@ -29,6 +29,7 @@ qrCodeBtn.addEventListener("click" , ()=>{
 qrCodeInput.addEventListener("Keydown" , (e)=>{
     if(e.code === "Enter"){
         generateQrCode();
+        
     }
 })
 
